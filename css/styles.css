@@ -1,0 +1,109 @@
+body {
+  background-color: #ccff99;
+  color: #336600;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.btn-rotate {
+  float: right;
+  border-color: #336600;
+  background-color: white;
+  color: #336600;
+  margin: -12px;
+}
+
+.container {
+  display: flex;
+  height: 27vw;
+  width: 80vw;
+  margin: auto;
+  -webkit-perspective: 800px;
+}
+
+.frame {
+  background-color: white;
+  border: 3px gray solid;
+  border-radius: 3px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 10px;
+  perspective: 700;
+}
+
+.tshirt {
+  flex: 8;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.9s ease;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: relative;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.tshirt:hover {
+   transform: rotateY(180deg);
+}
+/* navbar styles*/
+
+.navbar {
+  display: flex;
+  flex: 2;
+  border-top: 3px gray solid;
+}
+
+.email-link {
+  flex: 1;
+  border-right: 3px gray solid;
+}
+
+.like {
+  flex: 1;
+  border-right: 3px gray solid;
+}
+
+.size {
+  flex: 1;
+  font-size: 12px;
+  border-right: 3px gray solid;
+}
+
+.color {
+  flex: 1;
+  border-right: 3px gray solid;
+}
+
+.add-to-cart {
+  flex: 1;
+}
+/*
+.flip3d > .front {
+  -webkit-transform: rotate3d(0deg);
+}
+
+.flip3d > .back {
+  -webkit-transform: rotate3d(180deg);
+
+}*/
+
+
+img {
+  width: 80%;
+}
+
+img.menu-icons {
+  margin-top: 10px;
+  width: 50%;
+}
+
+img.smile {
+  width: 2%;
+}
