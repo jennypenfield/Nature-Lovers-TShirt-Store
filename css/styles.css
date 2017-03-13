@@ -111,12 +111,8 @@ img.smile {
   margin: auto 0;
 }
 
-@media (max-width: 320px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 80vw;
-    width: 80vw;
-    margin: auto;
-  }
+footer {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-top: 100px;
 }
