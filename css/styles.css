@@ -5,44 +5,37 @@ body {
   text-align: center;
 }
 
-.btn-rotate {
-  float: right;
-  border-color: #336600;
-  background-color: white;
-  color: #336600;
-  margin: -12px;
-}
-
 .container {
   display: flex;
-  height: 27vw;
-  width: 80vw;
-  margin: auto;
-  -webkit-perspective: 800px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto 0;
 }
 
 .frame {
   background-color: white;
-  border: 3px gray solid;
   border-radius: 3px;
+  border: 3px gray solid;
   display: flex;
-  flex: 1;
   flex-direction: column;
+  height: 340px;
   margin: 10px;
   perspective: 700;
+  width: 300px;
 }
 
 .tshirt {
-  flex: 8;
+  flex: 14;
   margin: 20px;
   text-align: center;
-  transition: all 0.9s ease;
   transform-style: preserve-3d;
+  transition: all 0.9s ease;
 }
 
 .front, .back {
   backface-visibility: hidden;
-  position: relative;
+  position: absolute;
 }
 
 .back {
@@ -52,48 +45,51 @@ body {
 .tshirt:hover {
    transform: rotateY(180deg);
 }
+
 /* navbar styles*/
 
 .navbar {
-  display: flex;
-  flex: 2;
+  border-bottom: 3px gray solid;
   border-top: 3px gray solid;
+  display: flex;
+  flex: 4;
 }
 
 .email-link {
-  flex: 1;
   border-right: 3px gray solid;
+  flex: 1;
 }
 
 .like {
-  flex: 1;
   border-right: 3px gray solid;
+  flex: 1;
 }
 
 .size {
+  align-content: center;
+  border-right: 3px gray solid;
   flex: 1;
   font-size: 12px;
-  border-right: 3px gray solid;
 }
 
 .color {
-  flex: 1;
   border-right: 3px gray solid;
+  flex: 1;
+  font-size: 12px;
+}
+
+a:link {
+  color: #336600;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  text-decoration: none;
 }
 
 .add-to-cart {
   flex: 1;
 }
-/*
-.flip3d > .front {
-  -webkit-transform: rotate3d(0deg);
-}
-
-.flip3d > .back {
-  -webkit-transform: rotate3d(180deg);
-
-}*/
-
 
 img {
   width: 80%;
@@ -106,4 +102,21 @@ img.menu-icons {
 
 img.smile {
   width: 2%;
+}
+
+.tshirt-name-price {
+  background-color: #ccff99;
+  flex: 1;
+  font-size: 22px;
+  margin: auto 0;
+}
+
+@media (max-width: 320px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 80vw;
+    width: 80vw;
+    margin: auto;
+  }
 }
